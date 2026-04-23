@@ -173,6 +173,11 @@ impl PagerInstance {
         self.render()?;
         loop {
             match read()? {
+                Event::Resize(cols, rows) => {
+                    self.rows = rows;
+                    self.cols = cols;
+                    self.render()?;
+                },
                 Event::Key(code) => {
                     match code.code {
                         KeyCode::Char(chr) => {
