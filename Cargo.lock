@@ -344,7 +344,6 @@ name = "winpager"
 version = "0.1.0"
 dependencies = [
  "crossterm",
- "log",
  "memmap",
  "unicode-width",
 ]
